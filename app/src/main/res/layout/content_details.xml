@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerHorizontal="true"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.opensource.giantturtle.movieexplorer.ui.detailsscreen.DetailsActivity"
+    tools:showIn="@layout/activity_details">
+
+
+    <ImageView
+        android:id="@+id/iv_owner_avatar"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentTop="true"
+        android:padding="@dimen/avatar_drawable_padding"
+        android:background="@drawable/black_rounded_background"
+        android:layout_centerHorizontal="true"
+        app:srcCompat="@drawable/error_image"
+        android:contentDescription="@string/image_of_the_repository_owner" />
+
+    <TextView
+        android:id="@+id/title_tv_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/iv_owner_avatar"
+        android:layout_centerHorizontal="true"
+        android:layout_alignEnd="@+id/iv_owner_avatar"
+        android:layout_alignStart="@+id/iv_owner_avatar"
+        android:gravity="center_horizontal"
+        tools:text="Movie Name"
+        android:textColor="@color/whiteColor"
+        android:textSize="@dimen/repo_owner_text_size"
+        android:background="@drawable/rounded_transparent_black_background"
+         />
+
+    <Button
+        android:id="@+id/action_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/iv_owner_avatar"
+        android:background="@drawable/action_button_selector_with_background"
+        android:textSize="@dimen/action_button_text_size"
+        android:drawableLeft="@drawable/bookmarks_24dp"
+        android:backgroundTint="@color/loadingDotsColor"
+        tools:text="Action"
+        />
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        android:scrollbars="vertical"
+        android:layout_below="@id/title_tv_details">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/original_title_tv_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Original movie title"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:background="@drawable/rounded_gray_background"
+                android:textColor="@color/whiteColor"
+                android:layout_marginTop="5dp"
+                />
+
+            <TextView
+                android:id="@+id/popularity_tv_details"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                tools:text="Popularity: 12345"
+                 />
+
+            <TextView
+                android:id="@+id/or_lang_tv_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Original language"
+                 />
+
+            <TextView
+                android:id="@+id/average_vote_tv_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Average Vote: 123.1235"
+                 />
+
+            <TextView
+                android:id="@+id/vote_count_tv_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Vote count: 123"
+                 />
+
+            <TextView
+                android:id="@+id/release_date_tv_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Release date: 12.05.2016 at 03:45"
+                 />
+
+
+
+
+
+            <TextView
+                android:id="@+id/overview_tv_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Overviewi,wiki,wiki,wiki,wiki,wiki,wiki,wiki,wiki,wiki,wiki,wiki,wiki,wiki,wiki,wiki,wiki,wiki,wiki,wiki,wiki,wiki,wiki,wiki,wiki,wiki,wiki,wiki,wiki,wiki,wiki,wiki,wiki,wiki,wiki,wiki,wiki,wiki,wiki,wiki,wiki,wiki,wiki,wiki,wiki,wiki,wiki,"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:gravity="center_horizontal" />
+
+            <Button
+                android:id="@+id/view_code_btn_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/view_code_top_margin"
+                android:drawablePadding="1dp"
+                android:padding="15dp"
+                android:drawableBottom="@drawable/view_code_24dp"
+                android:background="@drawable/white_rounded_button_selector"
+                android:gravity="center"
+                android:text="@string/see_reviews" />
+
+        </LinearLayout>
+
+
+
+    </ScrollView>
+
+</RelativeLayout>
